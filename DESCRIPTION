@@ -2,7 +2,7 @@ Package: scrapeR
 Type: Package
 Title: Function to scrape pre-announcements off of GOV.UK
 Version: 1.0
-Authors@R: c(person("Ben", "Cuff", role = c("aut", "cre")))
+Author: Ben Cuff
 License: MIT
 Encoding: UTF-8
 Imports: magrittr (>= 2.0.3), rvest (>= 1.0.4), stringr (>= 1.5.1) 
