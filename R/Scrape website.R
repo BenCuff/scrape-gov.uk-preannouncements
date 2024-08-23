@@ -46,11 +46,12 @@ scrape_preannouncements <- function(org = NA){
     #Check number of items to see if a result will be returned
     items <- html_nodes(page, '.gem-c-document-list__item')
     results <- length(unlist(items))
-    if(results == 0){
+    if(results == 0 & i==1){
       stop("You must provide a valid organisation string.\nThis must be in the same format that the organisation appears in the URL of the pre-announcements page (https://www.gov.uk/search/research-and-statistics), when the organisation is selected as a filter. For example, 'uk-health-security-agency'.")
+    }else if(results == 0){
+      break #stop the loop
     }
-    
-    
+
     #Get titles
     titles <- page %>% html_nodes(".gem-c-document-list__item-title a") %>% html_text() %>% tidy_up()
     
