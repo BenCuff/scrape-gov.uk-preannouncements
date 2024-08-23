@@ -3,4 +3,5 @@
 export(scrape_preannouncements)
 import(rvest)
 importFrom(magrittr,`%>%`)
+importFrom(stringr,`str_replace_all`)
 importFrom(stringr,`str_replace`)

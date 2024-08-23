@@ -7,6 +7,7 @@
 #' 
 #' @importFrom magrittr `%>%` 
 #' @import rvest
+#' @importFrom stringr `str_replace_all`
 #' 
 #' @author Ben Cuff
  
