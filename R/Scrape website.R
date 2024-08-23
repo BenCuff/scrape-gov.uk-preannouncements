@@ -110,7 +110,11 @@ scrape_preannouncements <- function(org = NA){
   #   filter(Date <= date_to_include)
   
   #Save csv output
-  write.csv(list, paste0("release_calendar_", org, Sys.Date(), ".csv"), row.names = F)
+  filename <- paste0("upcoming_statistics_", org, "_", Sys.Date(), ".csv")
+  write.csv(list, filename, row.names = F)
+  
+  #Print success message
+  cat(paste0("Scraping complete.\nA csv file has been saved in ", getwd(), ", named:\n'", filename, "'"))
   
   #Save markdown output
   # text <- ""
